@@ -6,37 +6,9 @@
 }
 
 body {
+  background: #000;
   color: #fff;
   line-height: 1.6;
-  background: #000;
-  overflow-x: hidden;
-}
-
-/* FUNDO COM ESCUDO DO ATLÉTICO */
-body::before {
-  content: "";
-  position: fixed;
-  width: 300%;
-  height: 300%;
-  top: -100%;
-  left: -100%;
-
-  background: url("galo.png") repeat;
-  background-size: 100px;
-
-  opacity: 0.04;
-
-  animation: movimentoGalo 30s linear infinite;
-  z-index: -1;
-}
-
-@keyframes movimentoGalo {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(300px, 300px);
-  }
 }
 
 /* HEADER */
@@ -45,8 +17,10 @@ body::before {
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
+  background: #111;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
@@ -73,9 +47,9 @@ body::before {
   position: absolute;
   width: 0%;
   height: 2px;
+  background: #fff;
   bottom: -5px;
   left: 0;
-  background: #fff;
   transition: 0.3s;
 }
 
@@ -103,18 +77,16 @@ body::before {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background: #fff;
-  color: #000;
+  border: 2px solid #fff;
+  color: #fff;
   text-decoration: none;
   border-radius: 25px;
-  font-weight: bold;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #fff;
+  background: #fff;
+  color: #000;
   transform: scale(1.05);
 }
 
@@ -128,17 +100,15 @@ body::before {
 
 .card {
   flex: 1 1 250px;
+  background: #111;
   padding: 20px;
   border-radius: 10px;
-
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-
+  border: 1px solid #333;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   border-color: #fff;
 }
 
@@ -146,8 +116,9 @@ body::before {
 .footer {
   text-align: center;
   padding: 20px;
-  background: #000;
+  background: #111;
   color: #aaa;
+  border-top: 1px solid #333;
 }
 
 /* RESPONSIVO */
