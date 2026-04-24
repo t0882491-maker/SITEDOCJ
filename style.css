@@ -6,55 +6,8 @@
 }
 
 body {
-  background: #000;
+  background: #0a0a0a;
   color: #fff;
-  line-height: 1.6;
-}
-
-/* HEADER */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background: #111;
-  border-bottom: 1px solid #333;
-  position: sticky;
-  top: 0;
-}
-
-.logo {
-  color: #fff;
-  letter-spacing: 2px;
-}
-
-/* MENU */
-.nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #ccc;
-  transition: 0.3s;
-  position: relative;
-}
-
-.nav a:hover {
-  color: #fff;
-}
-
-/* LINHA ANIMADA */
-.nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #fff;
-  bottom: -5px;
-  left: 0;
-  transition: 0.3s;
-}
-
-.nav a:hover::after {
-  width: 100%;
 }
 
 /* SECTIONS */
@@ -62,76 +15,50 @@ body {
   padding: 60px 10%;
 }
 
-.home {
-  height: 90vh;
-  display: flex;
-  align-items: center;
+h2 {
+  margin-bottom: 30px;
 }
 
-.container {
-  max-width: 1000px;
-}
-
-/* BOTÃO */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 25px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #fff;
-  color: #000;
-  transform: scale(1.05);
-}
-
-/* CARDS */
+/* GRID DE PROJETOS */
 .cards {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
+/* CARD */
 .card {
-  flex: 1 1 250px;
   background: #111;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #333;
+  border-radius: 15px;
+  overflow: hidden;
   transition: 0.3s;
+  border: 1px solid #222;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #fff;
+/* IMAGEM */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-/* FOOTER */
-.footer {
-  text-align: center;
+/* CONTEÚDO */
+.card-content {
   padding: 20px;
-  background: #111;
-  color: #aaa;
-  border-top: 1px solid #333;
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-  }
+.card h3 {
+  margin-bottom: 10px;
+}
 
-  .nav {
-    margin-top: 10px;
-  }
+.card p {
+  color: #bbb;
+  font-size: 14px;
+}
 
-  .cards {
-    flex-direction: column;
-  }
+/* HOVER BONITO */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: #fff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
 }
